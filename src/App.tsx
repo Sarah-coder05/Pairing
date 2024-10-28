@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './Component/Navbar';
+import FeaturesSection from './Component/Features';
+import HeroSection from './Component/Hero';
+import SecretSantaForm from './Component/SantaForm';
+import Footer from './Component/Footer';
+import bgImage from '../src/Asset/Bg-img.png'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <div
+        style={{ backgroundImage: `url(${bgImage})` }}
+        className="bg-cover bg-center min-h-screen text-white"
+      >
+      <Navbar />
+      <HeroSection />
+    </div>
+      <SecretSantaForm/>
+      <FeaturesSection/>
+      <Footer/>
     </div>
   );
 }
