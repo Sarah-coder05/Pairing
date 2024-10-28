@@ -1,59 +1,82 @@
+// src/components/Footer.tsx
 import React from "react";
+import { FaTwitter, FaInstagram, FaFacebookF } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-blue-900 text-white">
-      <div className="container mx-auto py-8 px-4 text-center">
-        <h2 className="text-lg font-semibold mb-4">Sign up for our newsletter</h2>
-        <p className="mb-4">Be the first to get notified about updates and insights.</p>
-        <div className="flex justify-center">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="p-2 rounded-l border-none"
-          />
-          <button className="bg-indigo-600 px-4 py-2 rounded-r text-white hover:bg-indigo-700">
-            Subscribe
-          </button>
-        </div>
-      </div>
-      <div className="bg-blue-800 py-8 text-center">
-        <div className="mb-4">
-          <h3 className="text-2xl font-bold">Pairings</h3>
-          <p>Design amazing digital experiences that create more happy in the world.</p>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-          <div>
-            <h4 className="font-semibold mb-2">Company</h4>
-            <ul>
-              <li>About Us</li>
-              <li>Pricing</li>
-            </ul>
+    <footer className="bg-blue-900 text-white py-12">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-start mb-10">
+          <div className="mb-6 md:mb-0 md:w-1/2">
+            <h3 className="text-xl font-semibold mb-2">Sign up for our newsletter</h3>
+            <p className="text-gray-300">
+              Be the first to get notified about updates and insights.
+            </p>
           </div>
-          <div>
-            <h4 className="font-semibold mb-2">Resources</h4>
-            <ul>
-              <li>Features</li>
-              <li>Group pairings</li>
-              <li>Secret Santa</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold mb-2">Legal</h4>
-            <ul>
-              <li>Privacy Policy</li>
-              <li>Terms of Service</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold mb-2">Support</h4>
-            <ul>
-              <li>Contact us</li>
-              <li>Partner with us</li>
-            </ul>
+          <div className="flex items-center md:w-1/2">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="bg-white text-gray-900 py-2 px-4 rounded-l-lg w-full md:w-3/4 mr-2"
+            />
+            <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-r-lg">
+              Subscribe
+            </button>
           </div>
         </div>
-        <p className="text-sm mt-4">© Pairings.co. All rights reserved</p>
+
+        {/* <hr className="border-gray-600 my-8" /> */}
+        <div className="flex flex-col md:flex-row justify-between text-sm space-y-6 md:space-y-0">
+          <div className="md:w-1/4">
+            <h1 className="text-2xl font-bold mb-3">Pairings</h1>
+            <p className="text-gray-300">
+              Design amazing digital experiences that create more happiness in the world.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-between md:space-x-12 w-full md:w-3/4">
+            <div>
+              <h4 className="font-semibold mb-2">Company</h4>
+              <ul className="text-gray-300 space-y-1">
+                <li><a href="#about" className="hover:text-gray-100">About Us</a></li>
+                <li><a href="#pricing" className="hover:text-gray-100">Pricing</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-2">Resources</h4>
+              <ul className="text-gray-300 space-y-1">
+                <li><a href="#features" className="hover:text-gray-100">Features</a></li>
+                <li><a href="#group-pairings" className="hover:text-gray-100">Group pairings</a></li>
+                <li><a href="#secret-santa" className="hover:text-gray-100">Secret Santa</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-2">Legal</h4>
+              <ul className="text-gray-300 space-y-1">
+                <li><a href="#privacy" className="hover:text-gray-100">Privacy Policy</a></li>
+                <li><a href="#terms" className="hover:text-gray-100">Terms of Service</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-2">Support</h4>
+              <ul className="text-gray-300 space-y-1">
+                <li><a href="#contact" className="hover:text-gray-100">Contact us</a></li>
+                <li><a href="#partner" className="hover:text-gray-100">Partner with us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <hr className="border-gray-600 my-8" />
+
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-400 text-sm mb-4 md:mb-0">© Pairings.co. All rights reserved</p>
+          <div className="flex space-x-4">
+            <a href="https://twitter.com" className="text-gray-400 hover:text-gray-100"><FaTwitter /></a>
+            <a href="https://instagram.com" className="text-gray-400 hover:text-gray-100"><FaInstagram /></a>
+            <a href="https://facebook.com" className="text-gray-400 hover:text-gray-100"><FaFacebookF /></a>
+          </div>
+        </div>
       </div>
     </footer>
   );
